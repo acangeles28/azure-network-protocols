@@ -39,25 +39,24 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
   - Observe the topology and details of your Virtual Network using Azure Network Watcher
 ![network topology](https://github.com/user-attachments/assets/15d263b4-1da7-49d8-95a3-b4577e304e5f)
 
-
 <p>Part 2: Observe ICMP Traffic<p/>
 
   - Connect to the Windows 10 VM using Remote Desktop
   - Install Wireshark within the Windows 10 VM
   - Open Wireshark and apply a filter to capture only ICMP traffic (used for ping commands).
   - Retrieve the private IP address of the Ubuntu VM and attempt to ping it from the Windows 10 VM.
-  ![ubuntu vm](https://github.com/user-attachments/assets/78935f6c-dfa0-407a-89e5-9e6db86ba7e2)
+![ubuntu vm](https://github.com/user-attachments/assets/78935f6c-dfa0-407a-89e5-9e6db86ba7e2)
 
   - Observe the ping requests and replies in Wireshark.
-  ![ping icmp 1](https://github.com/user-attachments/assets/1100c09f-74c8-4886-b18a-aa5e9b5488f4)
-
+    
+![ping icmp 1](https://github.com/user-attachments/assets/1100c09f-74c8-4886-b18a-aa5e9b5488f4)
   - From the Windows 10 VM, open Command Prompt or PowerShell and ping a public website (such as www.google.com)
   - Observe the public ping traffic in Wireshark
-  ![ping google](https://github.com/user-attachments/assets/f7e85623-378d-4d22-af00-5146a62c73f8)
+![ping google](https://github.com/user-attachments/assets/f7e85623-378d-4d22-af00-5146a62c73f8)
 
   - Initiate a continuous ping from the Windows 10 VM to the Ubuntu VM
   - In the Azure portal, access the Network Security Group (NSG) assigned to the Ubuntu VM and disable inbound ICMP traffic
-  ![inbound icmp](https://github.com/user-attachments/assets/dbdfb5b5-93e9-45bb-b167-7a88ba031533)
+![inbound icmp](https://github.com/user-attachments/assets/dbdfb5b5-93e9-45bb-b167-7a88ba031533)
 
   - Observe how the ICMP traffic stops in Wireshark and the command line due to the blocked traffic.
 <img width="1275" alt="ping icmp timeout" src="https://github.com/user-attachments/assets/eed6d59c-04f3-4631-97d2-bbcf2421bb00" />
